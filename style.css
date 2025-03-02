@@ -1,55 +1,88 @@
 * {
   box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
+
 body {
   background-color: black;
   font-family: "Bungee", serif;
 }
+
 h1 {
   text-align: center;
   margin-top: 40px;
   font-size: 44px;
   color: rgb(9, 230, 211);
 }
+
+/* Table Wrapper for Responsive Scrolling */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table Styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    background: white;
-    border: black 2px solid;
-    margin-top: 80px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
+  border: black 2px solid;
+  margin-top: 80px;
 }
-p{
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 24px;
+
+p {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
 }
+
+/* Table Cells */
 th, td {
-    border: 1px solid black;
-    padding: 12px;
-    text-align: center;
+  border: 1px solid black;
+  padding: 12px;
+  text-align: center;
 }
 
 th {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+  background-color: #007bff;
+  color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
-    text-align: center;
+  background-color: #f2f2f2;
 }
 
 tr:hover {
-    background-color: #ddd;
-    transition: 0.3s;
+  background-color: #ddd;
+  transition: 0.3s;
+}
+
+/* ✅ Mobile Responsive */
+@media screen and (max-width: 567px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* 👈 Mobile pe horizontal scroll allow */
+  }
+
+  table {
+    width: 100%;
+    min-width: 450px; /* 👈 Ab table adjust ho sakti hai */
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 6px; /* 👈 Small padding for mobile */
+    font-size: 12px;
+  }
 }
